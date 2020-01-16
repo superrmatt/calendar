@@ -67,21 +67,21 @@ $(document).ready(function(e){
         //body of the calendar
         tbl = document.getElementById("calendar-body"); 
     
-        //clearing all previous cells
+        //clear previous cells
         tbl.innerHTML = "";
     
-        //filing data about month and in the page via DOM.
+        //populate month data
         monthAndYear.innerHTML = months[month] + " " + year;
         selectYear.value = year;
         selectMonth.value = month;
     
-        //creating all cells
+        //create all cells
         let date = 1;
         for (let i = 0; i < 6; i++) {
-            //creates a table row
+            //create a table row
             let row = document.createElement("tr");
     
-            //creating individual cells, populating with data.
+            //create individual cells, populate with data.
             for (let j = 0; j < 7; j++) {
                 if (i === 0 && j < firstDay) {
                     cell = document.createElement("td");
